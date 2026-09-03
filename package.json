@@ -4,6 +4,8 @@
   "description": "A lightweight, universal browser information reader for JavaScript and TypeScript applications.",
   "license": "LGPL-3.0",
   "author": "CIC-IT Nancy",
+  "repository": "https://github.com/CIC-IT-Nancy/browser-information",
+  "bugs": "https://github.com/CIC-IT-Nancy/browser-information/issues",
   "contributors": [
     {
       "name": "Pierre 'AlasDiablo' M",
