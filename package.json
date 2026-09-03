@@ -1,0 +1,40 @@
+{
+  "name": "@cic-it-nancy/browser-information",
+  "version": "1.0.2",
+  "description": "A lightweight, universal browser information reader for JavaScript and TypeScript applications.",
+  "license": "LGPL-3.0",
+  "author": "CIC-IT Nancy",
+  "contributors": [
+    {
+      "name": "Pierre 'AlasDiablo' M",
+      "url": "https://github.com/AlasDiablo"
+    }
+  ],
+  "scripts": {
+    "build": "npm run build:typescript && npm run build:browser && npm run build:browser:min",
+    "build:typescript": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json",
+    "build:browser": "esbuild ./lib/esm/index.js --bundle --outfile=./lib/browser.js",
+    "build:browser:min": "esbuild ./lib/esm/index.js --bundle --minify --outfile=./lib/browser.min.js",
+    "prepublish": "npm run build"
+  },
+  "type": "module",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./types/index.d.ts",
+  "files": [
+    "./lib/*",
+    "./types/*"
+  ],
+  "devDependencies": {
+    "@eslint/js": "9.34.0",
+    "@stylistic/eslint-plugin": "5.3.1",
+    "esbuild": "0.28.2",
+    "eslint": "9.34.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-prettier": "5.5.4",
+    "globals": "16.3.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.42.0"
+  }
+}
